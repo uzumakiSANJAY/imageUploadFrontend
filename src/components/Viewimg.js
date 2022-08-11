@@ -4,7 +4,9 @@ function Viewimg() {
     const [image,setImage] = useState([])
     const [error,setError] = useState(null)
     useEffect(() => {
-        fetch(`http://127.0.0.1:8000/api/imageUpload/`)
+      
+        // fetch(`http://127.0.0.1:8000/api/imageUpload/`)
+        fetch(`https://imageupbackend.herokuapp.com/api/imageUpload/`)
          .then((response) => response.json())
          .then((actualData) => setImage(actualData))
          .then((actualData) => console.log(JSON.stringify(actualData)))
